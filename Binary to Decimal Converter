@@ -1,0 +1,27 @@
+def get_binary():
+
+    """Prompt user to input a decimal"""
+
+    binary = input('Please supply a binary string: ')
+    if binary.rfind('1') < 0 or binary.rfind('0') < 0:
+        binary = ''
+        print('Input a valid binary string!')
+    return binary
+
+def binary_to_decimal(binary):
+
+    '''Convert binary to decimal'''
+    decimal = 0
+    index = 0
+    while index < len(binary):
+        for bit in binary:
+            decimal = decimal + int(bit)*2**(len(binary)- index - 1)
+            index = index + 1
+    
+    return decimal
+
+binary = get_binary()
+if binary != '':
+    print(binary_to_decimal(binary))
+else:
+    print('Sorry!')
