@@ -1,6 +1,6 @@
 def get_binary():
 
-    """Prompt user to input a decimal"""
+    """Prompt user to input a binary"""
 
     binary = input('Please supply a binary string: ')
     if binary.rfind('1') < 0 or binary.rfind('0') < 0:
